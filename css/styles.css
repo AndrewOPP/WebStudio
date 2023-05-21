@@ -110,7 +110,7 @@ svg {
   padding-top: 24px;
 }
 
-@media only screen and (min-width: 767px) {
+@media only screen and (min-width: 768px) {
   .container.cont-header {
     justify-content: normal;
     padding-bottom: 0;
