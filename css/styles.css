@@ -616,16 +616,15 @@ svg {
   |============================
 */
 
-.footer-form {
-}
-
 @media only screen and (min-width: 768px) {
   .footer-form {
+    margin-right: 44px;
   }
 }
 @media only screen and (min-width: 1200px) {
   .footer-form {
     margin-left: 80px;
+    margin-right: 0px;
   }
 }
 
@@ -633,11 +632,12 @@ svg {
   margin-top: 16px;
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 16px;
   justify-content: center;
 }
 @media only screen and (min-width: 768px) {
   .footer-form-items {
+    gap: 24px;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -655,7 +655,8 @@ svg {
 }
 
 .footer-form-mail-input {
-  width: 264px;
+  width: 398px;
+
   height: 40px;
   border: 1px solid #ffffff;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -665,6 +666,17 @@ svg {
   transition: color 500ms, border-color 500ms;
   font-size: 12px;
   line-height: 2;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-form-mail-input {
+    width: 264px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .footer-form-mail-input {
+    width: 264px;
+  }
 }
 
 .footer-form-mail-input:required:not(:placeholder-shown):valid {
@@ -739,6 +751,7 @@ svg {
 
 @media only screen and (min-width: 768px) {
   .cont-footer {
+    text-align: left;
   }
 }
 
@@ -749,7 +762,6 @@ svg {
     width: 1158px;
     flex-wrap: nowrap;
     justify-content: normal;
-    text-align: left;
   }
 }
 
@@ -765,8 +777,17 @@ svg {
 .footer-list {
   display: flex;
   gap: 16px;
+  margin-bottom: 72px;
 }
-
+@media only screen and (min-width: 768px) {
+  .footer-list {
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .footer-list {
+    margin-bottom: 0px;
+  }
+}
 .footer-list-link {
   width: 100%;
   height: 100%;
@@ -789,17 +810,20 @@ svg {
 }
 
 .footer-logo-and-text {
+  margin-bottom: 72px;
 }
 
 @media only screen and (min-width: 768px) {
   .footer-logo-and-text {
+    text-align: left;
+    margin-right: 24px;
   }
 }
 
 @media only screen and (min-width: 1200px) {
   .footer-logo-and-text {
     margin-right: 120px;
-    text-align: left;
+    margin-bottom: 0px;
   }
 }
 
