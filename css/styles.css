@@ -273,10 +273,10 @@ svg {
   display: flex;
   flex-direction: column;
   gap: 40px;
+  margin-bottom: auto;
 }
 
 .address-mobile-menu {
-  margin-top: 284px;
   display: flex;
   gap: 40px;
   flex-direction: column-reverse;
@@ -346,9 +346,11 @@ svg {
   padding-right: 35px;
   background-color: #ffffff;
   z-index: 999;
-
+  display: flex;
+  flex-direction: column;
   transform: translateX(100%);
   transition: transform 250ms ease-in-out;
+  margin-bottom: auto;
 }
 
 .menu-container.is-open {
@@ -672,6 +674,7 @@ svg {
     gap: 56px;
     margin-top: 48px;
     justify-content: left;
+    margin-bottom: 40px;
   }
 }
 
