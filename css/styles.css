@@ -55,7 +55,12 @@ img {
 svg {
   fill: #f4f4fd;
 }
+
 .modal-close-icon {
+  fill: #2e2f42;
+}
+
+.burger-menu {
   fill: #2e2f42;
 }
 
@@ -100,6 +105,17 @@ svg {
 .container.cont-header {
   flex-direction: row;
   display: flex;
+  justify-content: space-between;
+  padding-bottom: 24px;
+  padding-top: 24px;
+}
+
+@media only screen and (min-width: 767px) {
+  .container.cont-header {
+    justify-content: normal;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
 }
 /* logo */
 .header-logo {
@@ -183,9 +199,21 @@ svg {
   padding-left: 0;
 }
 
+@media only screen and (max-width: 767px) {
+  .list.navigation {
+    display: none;
+  }
+}
+
 /* Additional information */
 .address-info {
   font-style: normal;
+}
+
+@media only screen and (max-width: 767px) {
+  .address-info {
+    display: none;
+  }
 }
 
 .list.address {
@@ -216,6 +244,131 @@ svg {
   color: #404bbf;
 }
 
+/**
+  |============================
+  | MObile-MENU
+  |============================
+*/
+
+.navigation-mobile-menu-words {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: #2e2f42;
+}
+
+.active-mobile {
+  color: #404bbf;
+}
+
+.navigation-mobile-menu-words:hover,
+.navigation-mobile-menu-words:focus {
+  color: #404bbf;
+}
+
+.navigation-mobile-menu {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.address-mobile-menu {
+  margin-top: 284px;
+  display: flex;
+  gap: 40px;
+  flex-direction: column-reverse;
+}
+
+.address-information-mobile-menu-tel {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: #434455;
+}
+
+.address-information-mobile-menu-tel:hover,
+.address-information-mobile-menu-tel:focus {
+  color: #4d5ae5;
+}
+
+.address-information-mobile-menu-ad {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #434455;
+}
+
+.address-information-mobile-menu-ad:hover,
+.address-information-mobile-menu-ad:focus {
+  color: #4d5ae5;
+}
+
+.menu-toggle {
+  min-height: 24px;
+  min-width: 24x;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding-left: 40px;
+  padding-right: 35px;
+  background-color: #ffffff;
+  z-index: 999;
+
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: rgb(231, 233, 252, 0.1);
+  border-radius: 50%;
+  border: 1px solid rgb(46, 47, 66, 0.1);
+  height: 24px;
+  width: 24px;
+}
+
+.modal-close-icon-mobile {
+  fill: #2e2f42;
+}
+
 /* Section one */
 .section-one {
   background-color: #2e2f42;
@@ -239,14 +392,34 @@ svg {
 }
 
 .section-one-title {
-  font-size: 56px;
-  line-height: 1.07;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  margin-bottom: 72px;
   text-align: center;
   letter-spacing: 0.02em;
+  text-transform: capitalize;
   color: #ffffff;
-  max-width: 496px;
-  margin-bottom: 48px;
+  width: 320px;
 }
+
+@media only screen and (min-width: 768px) {
+  .section-one-title {
+    font-size: 56px;
+    line-height: 1.07;
+    text-align: center;
+    letter-spacing: 0.02em;
+    width: 496px;
+    margin-bottom: 36px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .section-one-title {
+    max-width: 496px;
+    margin-bottom: 48px;
+  }
+}
+
 .section-one-button {
   background-color: #4d5ae5;
   font-family: "Roboto", sans-serif;
@@ -494,6 +667,14 @@ svg {
   height: 40px;
 }
 
+@media only screen and (max-width: 768px) {
+  .icons-list-section-four {
+    gap: 56px;
+    margin-top: 48px;
+    justify-content: left;
+  }
+}
+
 .icons-list-link {
   width: 100%;
   height: 100%;
@@ -560,6 +741,13 @@ svg {
 .section-five-list-li {
   width: 190px;
   height: 88px;
+}
+
+@media only screen and (min-width: 428px) {
+  .section-five-list-li {
+    width: calc((100% - 24px) / 2);
+    height: 88px;
+  }
 }
 
 @media only screen and (min-width: 768px) {
