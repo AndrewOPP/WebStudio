@@ -133,7 +133,16 @@ svg {
   display: flex;
   align-items: center;
 }
-
+@media only screen and (min-width: 768px) {
+  .nav-header {
+    gap: 120px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .nav-header {
+    gap: 0;
+  }
+}
 .header-logo.link {
 }
 @media only screen and (min-width: 768px) {
@@ -219,24 +228,51 @@ svg {
 .list.address {
   display: flex;
   flex-direction: row;
-  gap: 40px;
-  padding-left: 332px;
-  padding-top: 24px;
-  padding-bottom: 24px;
 }
-
+@media only screen and (min-width: 768px) {
+  .list.address {
+    padding-left: 0;
+    margin-left: 122px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    flex-wrap: wrap;
+    gap: 9px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .list.address {
+    padding-left: 332px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    flex-wrap: nowrap;
+    gap: 40px;
+    margin-left: 0;
+  }
+}
 .address-inf {
   font-style: normal;
 }
 
 .address-information {
   font-style: normal;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
   color: #434455;
   font-family: "Roboto";
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media only screen and (min-width: 768px) {
+  .address-information {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .address-information {
+    letter-spacing: 0.02em;
+    font-size: 16px;
+    line-height: 1.5;
+  }
 }
 
 .address-information:hover,
@@ -353,6 +389,14 @@ svg {
   margin-bottom: auto;
 }
 
+.icons-list-mobile-menu {
+  gap: 56px;
+  margin-top: 48px;
+  justify-content: left;
+  margin-bottom: 40px;
+  display: flex;
+}
+
 .menu-container.is-open {
   transform: translateX(0);
 }
@@ -369,6 +413,12 @@ svg {
 
 .modal-close-icon-mobile {
   fill: #2e2f42;
+}
+
+@media only screen and (min-width: 768px) {
+  .menu-container {
+    display: none;
+  }
 }
 
 /* Section one */
@@ -667,15 +717,6 @@ svg {
 .icons-list-li-section-four {
   width: 40px;
   height: 40px;
-}
-
-@media only screen and (max-width: 768px) {
-  .icons-list-section-four {
-    gap: 56px;
-    margin-top: 48px;
-    justify-content: left;
-    margin-bottom: 40px;
-  }
 }
 
 .icons-list-link {
