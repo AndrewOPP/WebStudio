@@ -1435,6 +1435,13 @@ svg {
   scale: 0.9;
 }
 
+@media only screen and (max-width: 767px) {
+  .footer-form-mail-input:focus + .label-footer-e-mail,
+  .footer-form-mail-input:not(:placeholder-shown) + .label-footer-e-mail {
+    transform: translateX(810%);
+  }
+}
+
 .footer-form-mail-input {
   color: #ffffff;
   padding-right: 61px;
