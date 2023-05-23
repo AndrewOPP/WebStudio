@@ -577,6 +577,7 @@ svg {
 }
 
 .section-two-titles {
+  text-align: center;
   line-height: 1.1;
   letter-spacing: 0.02em;
   color: #2e2f42;
@@ -587,6 +588,7 @@ svg {
 
 @media only screen and (min-width: 768px) {
   .section-two-titles {
+    text-align: left;
     font-weight: 700;
     font-size: 36px;
     line-height: 1.1;
@@ -846,14 +848,16 @@ svg {
 
 @media only screen and (min-width: 428px) {
   .section-five-list-li {
-    width: calc((100% - 24px) / 2);
+    width: 190px;
+    /* width: calc((100% - 24px) / 2); */
     height: 88px;
   }
 }
 
 @media only screen and (min-width: 768px) {
   .section-five-list-li {
-    width: calc((100% - 48px) / 3);
+    width: 168px;
+    /* width: calc((100% - 48px) / 3); */
     height: 88px;
   }
 }
@@ -944,8 +948,7 @@ svg {
 }
 
 .footer-form-mail-input {
-  width: 398px;
-
+  width: 290px;
   height: 40px;
   border: 1px solid #ffffff;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -955,6 +958,12 @@ svg {
   transition: color 500ms, border-color 500ms;
   font-size: 12px;
   line-height: 2;
+}
+
+@media only screen and (min-width: 428px) {
+  .footer-form-mail-input {
+    width: 398px;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -1269,11 +1278,18 @@ svg {
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 392px;
-  min-height: 586;
+  width: 284px;
+  min-height: 586px;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 24px;
+}
+
+@media only screen and (min-width: 420px) {
+  .modal {
+    width: 392px;
+    min-height: 586px;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -1429,7 +1445,7 @@ svg {
 .form-agreement {
   display: flex;
   gap: 8px;
-  justify-content: baseline;
+  align-items: center;
   margin-top: 16px;
 }
 
@@ -1451,6 +1467,12 @@ svg {
   transition: background-color 250ms, background-image 250ms;
 }
 
+@media only screen and (max-width: 420px) {
+  .form-check-input {
+    width: 23px;
+  }
+}
+
 .form-check-input:checked {
   background-color: #404bbf;
   border: 1px solid #404bbf;
@@ -1470,8 +1492,13 @@ svg {
   width: 169px;
   height: 56px;
   cursor: pointer;
-  margin: 24px 96px 0 95px;
+  margin: 24px auto 0 auto;
   transition: background-color 250ms;
+}
+
+.div-form-sumbit-button {
+  display: flex;
+  align-items: center;
 }
 
 .form-sumbit-button:hover,
